@@ -26,6 +26,7 @@ class MusicLibraryController
     when 'list_artists'
       list_artist
     end
+    self.call if input != 'exit'
   end
 
   def list_songs
