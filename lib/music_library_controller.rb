@@ -58,7 +58,6 @@ class MusicLibraryController
 
     song = Song.all.sort_by{|song| song.name}.detect{|song| Song.all.index(song) == input - 1}
 
-    puts "Playing #{song.name} by #{song.artist.name}"
     binding.pry
   end
 end
