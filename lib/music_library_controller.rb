@@ -51,4 +51,8 @@ class MusicLibraryController
 
     Song.all.select{|song| song.genre.name == input}.sort_by{|song| song.name}.each_with_index{|song, index| puts "#{index + 1}. #{song.artist.name} - #{song.name}"}
   end
+
+  def play_song
+
+  end
 end
