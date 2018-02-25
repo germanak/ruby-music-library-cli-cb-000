@@ -56,7 +56,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
 
-    
-    binding.pry
+
+    Song.all.detect{|song| song.index{|x| x == input}}
   end
 end
