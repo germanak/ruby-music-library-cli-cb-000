@@ -57,7 +57,7 @@ class MusicLibraryController
     input = gets.strip.to_i
     alphabetized = Song.all.sort_by{|song| song.name}
 
-    song = alphabetized.detect{|song| Song.all.index(song) == input - 1}
+    song = alphabetized.detect{|song| alphabetized.index(song) == input - 1}
     return nil if input < 1 || input > Song.all.size
 
     puts "Playing #{song.name} by #{song.artist.name}"
