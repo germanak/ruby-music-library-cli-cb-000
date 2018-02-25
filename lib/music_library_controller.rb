@@ -57,6 +57,7 @@ class MusicLibraryController
     input = gets.strip.to_i
 
     Song.all.sort_by{|song| song.name}.detect{|song| Song.all.index(song) == input - 1}
+    return nil if input < 1 || input > Song.all.size
 
   end
 end
