@@ -57,9 +57,6 @@ class MusicLibraryController
     input = gets.strip.to_i
 
     Song.all.sort_by{|song| song.name}.detect{|song| Song.all.index(song) == input - 1}
-      
-    end
 
-    binding.pry
   end
 end
