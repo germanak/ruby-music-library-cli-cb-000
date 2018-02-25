@@ -20,9 +20,11 @@ class MusicLibraryController
     puts "What would you like to do?"
     input = gets.chomp()
 
-    loop do
-      input = gets.chomp
-      break if input == 'exit'
+    case input
+    when 'list_songs'
+      list_songs
+    when 'list_artists'
+      list_artist
     end
   end
 
